@@ -23,8 +23,21 @@ namespace ObjectPooling
                 }
                 return pooledItem;
             }
+            
+            return CreatePooledObject();
+        }
 
+        public GameObject CreatePooledObject()
+        {
             var newPooledObject = Instantiate(pooledObject, Vector2.zero, Quaternion.identity, _pooledObjectParent);
+            if (newPooledObject.TryGetComponent<PooledObject>(out var pooled))
+            {
+                pooled.Init(this);
+            }
+            else
+            {
+                Debug.LogError($"Tried to add an object: {newPooledObject.name} to a pool without a PooledObject");
+            }
             newPooledObject.SetActive(false);
             return newPooledObject;
         }
@@ -44,15 +57,7 @@ namespace ObjectPooling
             
             for (int i = 0; i < minAmount; i++)
             {
-                var newPooledObject = Instantiate(
-                    pooledObject, 
-                    Vector2.zero,
-                    Quaternion.identity, 
-                    _pooledObjectParent
-                );
-                
-                newPooledObject.SetActive(false);
-                _pool.Enqueue(newPooledObject);     
+                _pool.Enqueue(CreatePooledObject());     
             }
         }
 

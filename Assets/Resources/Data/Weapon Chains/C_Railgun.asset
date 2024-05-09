@@ -15,3 +15,7 @@ MonoBehaviour:
   chainName: Railgun
   levels:
   - {fileID: 11400000, guid: 36dd745de4bbd694a92fee09b4b52e56, type: 2}
+  - {fileID: 11400000, guid: b762de20468dfc248a0f3217ef23c0e4, type: 2}
+  - {fileID: 11400000, guid: bf8f4d6aaeb40b74eb70d630d93e99c1, type: 2}
+  - {fileID: 11400000, guid: 5a6c971b381094f4e99dd6db63e8ebda, type: 2}
+  - {fileID: 11400000, guid: 5d27ce44e06c4da47879136a41d9bd9d, type: 2}

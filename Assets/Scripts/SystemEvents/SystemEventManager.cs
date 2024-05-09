@@ -7,11 +7,12 @@ namespace SystemEvents
     {
         public enum SystemEventType
         {
-            EnemySpawned,
-            GameEnd,
             GameStart,
-            EnemyDamaged,
-            PlayerDamaged
+            PlayerDamaged,
+            ExperienceClaimed,
+            GameEnd,
+            LevelUp,
+            UpgradeChosen
         }
 
         private static Dictionary<SystemEventType, Action<object>> _eventListeners;
