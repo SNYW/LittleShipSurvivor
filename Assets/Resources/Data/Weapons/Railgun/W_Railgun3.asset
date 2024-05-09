@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecb81d292186363458eadffd8631bb31, type: 3}
-  m_Name: W_Railgun1
+  m_Name: W_Railgun3
   m_EditorClassIdentifier: 
-  id: Railgun 1
-  weaponPrefab: {fileID: 3344975455172204106, guid: d282af9b64d332743a026a66059b7482, type: 3}
-  description: A Single forward facing shot
+  id: Railgun 3
+  weaponPrefab: {fileID: 3344975455172204106, guid: cd235a6a543448e41be25e4533d59de6, type: 3}
+  weaponSprite: {fileID: 21300000, guid: 622cc8404b03270439d0b5bb2591ff58, type: 3}
+  description: "Faster single shots \n\t\n\t+30% Fire Rate"

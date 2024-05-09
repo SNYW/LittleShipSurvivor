@@ -24,6 +24,7 @@ public class ChooseOption : MonoBehaviour, IPointerDownHandler
         chainName.text = definition.chainName;
         upgradeDescription.text = nextWeapon.description;
         upgradeLevel.text = $"Lvl {chain.GetCurrentLevel()+2}";
+        upgradeIcon.sprite = nextWeapon.weaponSprite;
     }
 
     public void OnPointerDown(PointerEventData eventData)

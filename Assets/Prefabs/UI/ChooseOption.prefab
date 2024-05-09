@@ -192,7 +192,7 @@ MonoBehaviour:
   chainName: {fileID: 4592416103021840322}
   upgradeDescription: {fileID: 7959711599135471879}
   upgradeLevel: {fileID: 5519423087241010698}
-  upgradeIcon: {fileID: 0}
+  upgradeIcon: {fileID: 8254313874697884101}
 --- !u!222 &1044406431869208609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -419,8 +419,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 68.82175, y: -17.1673}
-  m_SizeDelta: {x: -266.1621, y: -117.6653}
+  m_AnchoredPosition: {x: 82.26312, y: -17.167297}
+  m_SizeDelta: {x: -293.0449, y: -117.6653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2126265438234472713
 CanvasRenderer:
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 1797716636819534635}
   - component: {fileID: 8254313874697884101}
   m_Layer: 5
-  m_Name: Icon Background
+  m_Name: Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,8 +554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45, y: -76}
-  m_SizeDelta: {x: 115.29831, y: 123.43}
+  m_AnchoredPosition: {x: 39, y: -75.99994}
+  m_SizeDelta: {x: 141.8937, y: 151.9011}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1797716636819534635
 CanvasRenderer:
@@ -585,7 +585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7fab02b5259a51645a6358ee44e20dea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 622cc8404b03270439d0b5bb2591ff58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

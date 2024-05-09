@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ecb81d292186363458eadffd8631bb31, type: 3}
-  m_Name: W_Railgun4
+  m_Name: W_Missile1
   m_EditorClassIdentifier: 
-  id: Railgun 4
-  weaponPrefab: {fileID: 3344975455172204106, guid: a1987371cb1489b4199a8382740990ff, type: 3}
-  description: "Upgrades to Dual Railguns \n\t\n\t+1 Railgun\n\t+100% Range\n\t"
+  id: Weapon
+  weaponPrefab: {fileID: 3344975455172204106, guid: 84ea3755ad0dcac4ca10452ac0668d44, type: 3}
+  weaponSprite: {fileID: 21300000, guid: f877984b6e5c8ed43a74f11ea986c16c, type: 3}
+  description: Fires homing missiles at enemies

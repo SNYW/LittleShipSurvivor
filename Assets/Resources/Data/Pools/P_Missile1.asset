@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb81d292186363458eadffd8631bb31, type: 3}
-  m_Name: W_Railgun2
+  m_Script: {fileID: 11500000, guid: d9ddddecc3393154e9f3ac317e7a64c2, type: 3}
+  m_Name: P_Missile1
   m_EditorClassIdentifier: 
-  id: Railgun 2
-  weaponPrefab: {fileID: 3344975455172204106, guid: a8ebd796640a7b143a751d5fbcf8fbd3, type: 3}
-  description: "Faster single shots \n\t\n\t+20% Fire Rate"
+  pooledObject: {fileID: 4928698850947257878, guid: 539a5ef310b29a542b43fe833fe664ea, type: 3}
+  minAmount: 1

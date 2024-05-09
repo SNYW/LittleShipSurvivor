@@ -5,6 +5,7 @@ public class WeaponDefinition : ScriptableObject
 {
     public string id;
     public Weapon weaponPrefab;
+    public Sprite weaponSprite;
     [TextArea(20, 100)]
     public string description;
 }
