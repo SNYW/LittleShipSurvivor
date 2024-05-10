@@ -12,7 +12,7 @@ namespace ObjectPooling
         }
 
         protected void ReQueue()
-        { 
+        {
             if (_pool == null)
             {
                 Debug.LogError($"Pooled Object: {gameObject.name} has no pool");
@@ -23,7 +23,6 @@ namespace ObjectPooling
                 transform.position = Vector3.zero;
                 transform.parent = ObjectPoolManager._pooledObjectAnchor;
                 _pool.ReQueue(gameObject);
-                gameObject.SetActive(false);
             }
         }
     }

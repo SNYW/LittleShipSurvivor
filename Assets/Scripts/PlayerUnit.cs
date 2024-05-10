@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class PlayerUnit : Unit
 {
-    private Rigidbody2D _rb;
-
     public float baseTurnSpeed;
     public float baseMoveSpeed;
 
@@ -12,7 +10,7 @@ public class PlayerUnit : Unit
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        Rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -22,7 +20,7 @@ public class PlayerUnit : Unit
 
     private void FixedUpdate()
     {
-        _rb.AddForce(transform.up * baseMoveSpeed, ForceMode2D.Force);
+        Rb.AddForce(transform.up * baseMoveSpeed, ForceMode2D.Force);
         
         if (GameManager.turningLeft && !GameManager.turningRight)
         {
@@ -40,11 +38,11 @@ public class PlayerUnit : Unit
 
     private void Turn(float turn)
     {
-        _rb.AddTorque(turn);
+        Rb.AddTorque(turn);
     }
 
     private void Boost()
     {
-        _rb.AddForce(transform.up * baseMoveSpeed, ForceMode2D.Force);
+        Rb.AddForce(transform.up * baseMoveSpeed, ForceMode2D.Force);
     }
 }

@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 741234ed0aa5b6c4a890a1f48ca00381, type: 3}
-  m_Name: Single Target Player
+  m_Script: {fileID: 11500000, guid: d9ddddecc3393154e9f3ac317e7a64c2, type: 3}
+  m_Name: EF_RailgunHit
   m_EditorClassIdentifier: 
-  maxTargets: 1
-  hitRadius: 1
-  hitmask:
-    serializedVersion: 2
-    m_Bits: 256
+  pooledObject: {fileID: 5792752541603415755, guid: 888843123f9f1fb4cbed963144c18735, type: 3}
+  minAmount: 1

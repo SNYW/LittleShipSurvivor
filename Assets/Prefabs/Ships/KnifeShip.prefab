@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6596077661325298162}
   - component: {fileID: 1104393540659019813}
   - component: {fileID: 1706423451872626414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KnifeShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,8 +50,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a8676d2a0b1be49893625d3d517628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseTurnSpeed: 12
-  baseMoveSpeed: 8
+  maxHealth: 0
+  moveSpeed: 0
+  movementBehaviour: {fileID: 0}
+  onDeathEffects: []
+  baseTurnSpeed: 20
+  baseMoveSpeed: 12
   startChain: {fileID: 11400000, guid: abdbda84940c30148ad785cb430ee576, type: 2}
 --- !u!50 &1104393540659019813
 Rigidbody2D:
@@ -141,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8795735866245077489}
   - component: {fileID: 2934421125739391290}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8352506981571596328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,7 +261,7 @@ GameObject:
   - component: {fileID: 709876783822792521}
   - component: {fileID: 7597564708777570900}
   - component: {fileID: 2219593958733582285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5096,7 +5100,7 @@ GameObject:
   - component: {fileID: 805274508792907315}
   - component: {fileID: 2795790600066777134}
   - component: {fileID: 278360038972802669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using ObjectPooling;
 using Spells.SpellEffects;
@@ -22,8 +23,8 @@ namespace Spells
   
     [SerializeReference]
     public SpellEffect[] onHitEffects;
-  
-    private void OnEnable()
+
+    public virtual void InitProjectile()
     {
       StopAllCoroutines();
       StartCoroutine(TriggerAllEffects(onCastEffects, onCastDelay));
@@ -68,7 +69,7 @@ namespace Spells
       }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
       transform.Translate(Vector3.up * (speed * Time.deltaTime));
     }
@@ -86,6 +87,7 @@ namespace Spells
 
     private void Die()
     {
+      StopAllCoroutines();
       TriggerAllEffectsImmediate(onHitEffects);
       StopAllCoroutines();
       ReQueue();

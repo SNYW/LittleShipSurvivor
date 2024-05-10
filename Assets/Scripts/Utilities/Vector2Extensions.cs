@@ -15,6 +15,8 @@ namespace Utilities
             
             foreach (var gameObject in objects)
             {
+                if(gameObject== null) continue;
+                
                 if (Vector2.Distance(pos, gameObject.transform.position) <
                     Vector2.Distance(pos, returnObj.transform.position))
                 {

@@ -63,6 +63,7 @@ namespace ObjectPooling
 
         public void ReQueue(GameObject obj)
         {
+            obj.SetActive(false);
             _pool.Enqueue(obj);
         }
 

@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
+  moveSpeed: 6
+  movementBehaviour: {fileID: 11400000, guid: eb8fb2457b0b3674f92b44d4f1af4378, type: 2}
   onDeathEffects:
   - {fileID: 11400000, guid: d800f457de1161e44a30d0a60249033e, type: 2}
 --- !u!212 &4324875089366313739

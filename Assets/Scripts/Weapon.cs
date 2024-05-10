@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using ObjectPooling;
+using Spells;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -34,6 +35,9 @@ public class Weapon : MonoBehaviour
         projectile.transform.position = t.position;
         projectile.transform.up = t.up;
         projectile.SetActive(true);
+        
+        if(projectile.TryGetComponent<Projectile>(out var p))
+            p.InitProjectile();
     }
 
     private void OnDisable()

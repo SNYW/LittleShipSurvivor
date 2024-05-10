@@ -82,6 +82,7 @@ MonoBehaviour:
   onCastEffects: []
   onHitEffects:
   - {fileID: 11400000, guid: f37835fb5be89af41a8326896d63bf4b, type: 2}
+  - {fileID: 11400000, guid: 4840780d3f54b344a922cb56c9e98b19, type: 2}
 --- !u!61 &385081644785547804
 BoxCollider2D:
   m_ObjectHideFlags: 0
