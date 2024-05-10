@@ -1,11 +1,11 @@
+using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "new Weapon Definition", menuName = "Game Data/Weapon Definition")]
-public class WeaponDefinition : ScriptableObject
+[Serializable]
+public class WeaponDefinition
 {
-    public string id;
     public Weapon weaponPrefab;
     public Sprite weaponSprite;
-    [TextArea(20, 100)]
+    [TextArea(1, 3)]
     public string description;
 }

@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5909839943470839505}
+  - {fileID: 3442420358566425288}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3344975455172204106
@@ -50,6 +51,7 @@ MonoBehaviour:
   cooldown: 5
   projectileAnchors:
   - {fileID: 5909839943470839505}
+  - {fileID: 3442420358566425288}
 --- !u!212 &2663005976299453658
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -133,3 +135,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4171665567627367069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.91}
+--- !u!1 &6710337411343419513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3442420358566425288}
+  m_Layer: 0
+  m_Name: Projectile Anchor (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3442420358566425288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710337411343419513}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.34947154, w: 0.936947}
+  m_LocalPosition: {x: 1.15, y: -1.45, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4171665567627367069}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.91}

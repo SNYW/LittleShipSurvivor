@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePool: {fileID: 11400000, guid: a49e0d2eec661034aac9fb2e0af668b6, type: 2}
-  cooldown: 1
+  cooldown: 1.3
   projectileAnchors:
   - {fileID: 5909839943470839505}
 --- !u!1 &6661482830577557834

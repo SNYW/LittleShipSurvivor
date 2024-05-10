@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Single Target Player
   m_EditorClassIdentifier: 
   maxTargets: 1
-  hitRadius: 1
+  hitRadius: 0.1
   hitmask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256

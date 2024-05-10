@@ -1,8 +1,7 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerUnit : MonoBehaviour
+public class PlayerUnit : Unit
 {
     private Rigidbody2D _rb;
 
@@ -46,6 +45,6 @@ public class PlayerUnit : MonoBehaviour
 
     private void Boost()
     {
-        throw new NotImplementedException();
+        _rb.AddForce(transform.up * baseMoveSpeed, ForceMode2D.Force);
     }
 }

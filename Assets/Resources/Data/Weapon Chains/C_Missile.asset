@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chainName: Missile
   levels:
-  - {fileID: 11400000, guid: 06042bcf4098d8941895795651990d97, type: 2}
-  - {fileID: 11400000, guid: d388fe263c122a04bacd0c65b33abbbc, type: 2}
+  - weaponPrefab: {fileID: 3344975455172204106, guid: 84ea3755ad0dcac4ca10452ac0668d44, type: 3}
+    weaponSprite: {fileID: 21300000, guid: f877984b6e5c8ed43a74f11ea986c16c, type: 3}
+    description: Fires Homing Missiles
+  - weaponPrefab: {fileID: 3344975455172204106, guid: cde74dbdef4f30f45a3088b156dec6b8, type: 3}
+    weaponSprite: {fileID: 21300000, guid: f877984b6e5c8ed43a74f11ea986c16c, type: 3}
+    description: Fires two Homing Missiles

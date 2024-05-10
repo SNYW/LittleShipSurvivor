@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+   public static PlayerUnit playerShip;
+   
    public static bool turningLeft;
    public static bool turningRight;
 
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
       SystemEventManager.Init();
       ObjectPoolManager.InitPools();
       WeaponManager.Init();
+      playerShip = FindObjectOfType<PlayerUnit>();
    }
 
    private void Update()
