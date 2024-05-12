@@ -19,8 +19,14 @@ public class ExperienceBar : MonoBehaviour
     
     private void OnExperienceGained(object obj)
     {
-        fillImage.fillAmount = GameManager.instance.CurrentExpPercentage;
-        Debug.Log(GameManager.instance.CurrentExpPercentage);
+        LeanTween.cancelAll(gameObject);
+        LeanTween.value(gameObject, fillImage.fillAmount, GameManager.instance.CurrentExpPercentage, 0.1f)
+            .setEase(LeanTweenType.easeOutQuad)
+            .setOnUpdate(
+            val =>
+            {
+                fillImage.fillAmount = val;
+            });
     }
 
     private void OnDisable()
