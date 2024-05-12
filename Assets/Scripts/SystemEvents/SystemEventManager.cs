@@ -9,7 +9,7 @@ namespace SystemEvents
         {
             GameStart,
             PlayerDamaged,
-            ExperienceClaimed,
+            ExperienceGained,
             GameEnd,
             LevelUp,
             UpgradeChosen

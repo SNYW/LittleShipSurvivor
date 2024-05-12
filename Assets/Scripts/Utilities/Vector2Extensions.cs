@@ -26,5 +26,12 @@ namespace Utilities
 
             return returnObj;
         }
+
+        public static float FastDistance(this Vector2 pos, Vector2 otherPos)
+        {
+            float squaredDistance = (pos - otherPos).sqrMagnitude;
+            
+            return Mathf.Sqrt(squaredDistance);
+        }
     }
 }
