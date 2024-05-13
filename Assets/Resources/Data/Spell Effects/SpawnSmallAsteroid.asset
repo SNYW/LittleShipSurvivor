@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695f73e72f064d83990c2aab05978f1f, type: 3}
   m_Name: SpawnSmallAsteroid
   m_EditorClassIdentifier: 
-  amount: 2
-  pool: {fileID: 11400000, guid: f54f71b8e67b6384f8f5babc62c1af28, type: 2}
+  amount: 3
+  pool: {fileID: 11400000, guid: fbde3dd6d6ca12a4bbd8304dbd4ae3a6, type: 2}
+  spawnRadius: 10

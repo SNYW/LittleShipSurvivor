@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeab8ca649331de48901424f2c28264c, type: 3}
   m_Name: LaunchTowardsPlayer
   m_EditorClassIdentifier: 
+  isPhysicsMove: 1
   updateCooldown: -1
   moveTarget: 0
+  randomOffset: {x: 10, y: 10}
+  enemyCheckRadius: 0
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0

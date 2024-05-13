@@ -1,11 +1,22 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using ObjectPooling;
 using SystemEvents;
 using UnityEngine;
+using Utilities;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
    public static PlayerUnit playerShip;
    public static GameManager instance;
+
+   public float asteroidSpawnRadius;
+   public float asteroidSpawnBaseCooldown;
+   public float asteroidSpawnPerLevelSpeedup;
+   public ObjectPool[] asteroidPools;
+   private float CurrentAsteroidSpawnTime => asteroidSpawnBaseCooldown - asteroidSpawnPerLevelSpeedup * currentLevel;
    
    public static bool turningLeft;
    public static bool turningRight;
@@ -32,6 +43,11 @@ public class GameManager : MonoBehaviour
       SystemEventManager.RaiseEvent(SystemEventManager.SystemEventType.GameStart, this);
    }
 
+   private void Start()
+   {
+      StartCoroutine(SpawnAsteroids());
+   }
+
    public void AddExperience(int experience)
    {
       _currentExp += experience;
@@ -50,6 +66,32 @@ public class GameManager : MonoBehaviour
       {
          OnLevelUp(null);
       }
+   }
+
+   private IEnumerator SpawnAsteroids()
+   {
+      while (gameObject.activeSelf)
+      {
+         var pos = GetRandomPointInRadius(playerShip.transform.position, asteroidSpawnRadius);
+         var newAsteroid = asteroidPools.Random().GetPooledObject();
+         newAsteroid.transform.position = pos;
+         newAsteroid.SetActive(true);
+         
+         yield return new WaitForSeconds(CurrentAsteroidSpawnTime);
+      }
+   }
+
+   public static Vector2 GetRandomPointInRadius(Vector3 center, float radius, bool onEdge = true)
+   {
+      float angle = Random.Range(0f, 2f * Mathf.PI);
+      
+      
+      float distance = onEdge ? radius : Random.Range(0f, radius);
+      
+      float newX = center.x + distance * Mathf.Cos(angle);
+      float newY = center.y + distance * Mathf.Sin(angle);
+        
+      return new Vector3(newX, newY);
    }
 
    private void OnLevelUp(object o)

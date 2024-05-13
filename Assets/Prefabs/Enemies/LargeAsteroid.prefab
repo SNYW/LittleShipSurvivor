@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1090499667170704353}
   - component: {fileID: 8289011579967362507}
   m_Layer: 8
-  m_Name: Asteroid
+  m_Name: LargeAsteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,11 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39378fa5fd5555745812992dc6eca86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  moveSpeed: 6
+  maxHealth: 15
+  moveSpeed: 400
   movementBehaviour: {fileID: 11400000, guid: eb8fb2457b0b3674f92b44d4f1af4378, type: 2}
   onDeathEffects:
   - {fileID: 11400000, guid: d800f457de1161e44a30d0a60249033e, type: 2}
+  - {fileID: 11400000, guid: bb811530741091843900e01585cadd38, type: 2}
   - {fileID: 11400000, guid: bb811530741091843900e01585cadd38, type: 2}
 --- !u!212 &4324875089366313739
 SpriteRenderer:
@@ -119,9 +120,9 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2440da6c96210ac40a01cb63cd108610, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

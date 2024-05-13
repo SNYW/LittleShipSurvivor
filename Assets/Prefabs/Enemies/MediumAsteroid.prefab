@@ -18,27 +18,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2410022555194012569, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2410022555194012569, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: onDeathEffects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2410022555194012569, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: onDeathEffects.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: bb811530741091843900e01585cadd38, type: 2}
+    - target: {fileID: 2410022555194012569, guid: a289167655798c64ba8524d19f324f2f, type: 3}
+      propertyPath: onDeathEffects.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: d800f457de1161e44a30d0a60249033e, type: 2}
     - target: {fileID: 8188215821593261540, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: m_Name
-      value: SmallAsteroid
+      value: MediumAsteroid
       objectReference: {fileID: 0}
     - target: {fileID: 9215265334910686970, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9215265334910686970, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9215265334910686970, guid: a289167655798c64ba8524d19f324f2f, type: 3}
       propertyPath: m_LocalPosition.x

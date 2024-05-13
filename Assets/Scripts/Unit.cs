@@ -40,7 +40,7 @@ public class Unit : PooledObject
 
    private void FixedUpdate()
    {
-      if(movementBehaviour != null && movementBehaviour.isPhysicsMove && Rb != null)
+      if(movementBehaviour != null && movementBehaviour.isPhysicsMove && Rb != null && movementBehaviour.updateCooldown != -1)
          Rb.AddForce(_targetMoveDirection.normalized * moveSpeed, ForceMode2D.Force);
    }
 
@@ -52,6 +52,9 @@ public class Unit : PooledObject
       {
          _targetMoveDirection = movementBehaviour.GetTargetDirection(transform);
          
+         if(movementBehaviour.isPhysicsMove && movementBehaviour.updateCooldown == -1)
+            Rb.AddForce(_targetMoveDirection.normalized * moveSpeed, ForceMode2D.Force);
+         
          if(movementBehaviour.updateCooldown == -1)
             break;
          
@@ -59,7 +62,7 @@ public class Unit : PooledObject
       }
    }
 
-protected void Die()
+   protected void Die()
    {
       foreach (var effect in onDeathEffects)
       {

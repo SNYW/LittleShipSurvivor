@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9ddddecc3393154e9f3ac317e7a64c2, type: 3}
-  m_Name: SmallAsteroid
+  m_Name: MediumAsteroid
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 2431276921799012054, guid: 5a2716551f384f44cb0634b7e72d6cc9, type: 3}
+  pooledObject: {fileID: 2431276921799012054, guid: d027084c48a73964c92c1c1da33771b2, type: 3}
   minAmount: 1

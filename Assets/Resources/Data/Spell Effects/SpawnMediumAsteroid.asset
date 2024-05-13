@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ddddecc3393154e9f3ac317e7a64c2, type: 3}
-  m_Name: SmallAsteroid
+  m_Script: {fileID: 11500000, guid: 695f73e72f064d83990c2aab05978f1f, type: 3}
+  m_Name: SpawnMediumAsteroid
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 2431276921799012054, guid: 5a2716551f384f44cb0634b7e72d6cc9, type: 3}
-  minAmount: 1
+  amount: 3
+  pool: {fileID: 11400000, guid: f54f71b8e67b6384f8f5babc62c1af28, type: 2}
+  spawnRadius: 10

@@ -9,6 +9,9 @@ namespace MovementBehaviours
     public class MoveTowardsBehaviour : MovementBehaviour
     {
         public MoveTarget moveTarget;
+
+        [ShowIf("moveTarget", MoveTarget.Player)]
+        public Vector2 randomOffset;
         
         [ShowIf("moveTarget", MoveTarget.NearestInMask)] 
         public float enemyCheckRadius;
@@ -25,17 +28,17 @@ namespace MovementBehaviours
         {
             return moveTarget switch
             {
-                MoveTarget.Player => GetDirectionToPlayer(t),
+                MoveTarget.Player => GetDirectionToPlayer(t ,randomOffset.GetRandom()),
                 MoveTarget.NearestInMask => GetNearestEnemyDirection(t),
                 _ => Vector3.zero
             };
         }
 
-        private Vector3 GetDirectionToPlayer(Transform t)
+        private Vector3 GetDirectionToPlayer(Transform t, Vector2 offset)
         {
             if (GameManager.playerShip == null) return t.position;
 
-            return GameManager.playerShip.transform.position - t.position;
+            return GameManager.playerShip.transform.position + (Vector3)offset - t.position;
         }
 
         private Vector3 GetNearestEnemyDirection(Transform t)

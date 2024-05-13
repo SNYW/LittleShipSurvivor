@@ -8,6 +8,7 @@ namespace Spells.SpellEffects
     {
         public int amount = 1;
         public ObjectPool pool;
+        public float spawnRadius;
         
         public override void Trigger(GameObject obj)
         {
@@ -20,7 +21,8 @@ namespace Spells.SpellEffects
         private void SpawnTargetObject(GameObject gameObject)
         {
             var pooledObj = pool.GetPooledObject();
-            pooledObj.transform.position = gameObject.transform.position;
+            var pos = GameManager.GetRandomPointInRadius(gameObject.transform.position, spawnRadius);
+            pooledObj.transform.position = pos;
             pooledObj.SetActive(true);
         }
     }
