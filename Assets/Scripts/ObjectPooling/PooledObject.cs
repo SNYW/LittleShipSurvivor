@@ -11,6 +11,11 @@ namespace ObjectPooling
             _pool = pool;
         }
 
+        public virtual void Activate()
+        {
+            
+        }
+
         protected void ReQueue()
         {
             if (_pool == null)

@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
       ObjectPoolManager.InitPools();
       WeaponManager.Init();
       playerShip = FindObjectOfType<PlayerUnit>();
+      playerShip.Activate();
       instance = this;
       
       SystemEventManager.Subscribe(SystemEventManager.SystemEventType.LevelUp, OnLevelUp);
@@ -73,9 +74,10 @@ public class GameManager : MonoBehaviour
       while (gameObject.activeSelf)
       {
          var pos = GetRandomPointInRadius(playerShip.transform.position, asteroidSpawnRadius);
-         var newAsteroid = asteroidPools.Random().GetPooledObject();
+         var newAsteroid = asteroidPools.Random().GetPooledObject().GetComponent<EnemyUnit>();
          newAsteroid.transform.position = pos;
-         newAsteroid.SetActive(true);
+         newAsteroid.gameObject.SetActive(true);
+         newAsteroid.Activate();
          
          yield return new WaitForSeconds(CurrentAsteroidSpawnTime);
       }
