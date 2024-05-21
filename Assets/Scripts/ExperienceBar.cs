@@ -10,6 +10,7 @@ public class ExperienceBar : MonoBehaviour
     {
         SystemEventManager.Subscribe(SystemEventManager.SystemEventType.GameStart, OnGameStart);
         SystemEventManager.Subscribe(SystemEventManager.SystemEventType.ExperienceGained, OnExperienceGained);
+        SystemEventManager.Subscribe(SystemEventManager.SystemEventType.LevelUp, OnExperienceGained);
     }
 
     private void OnGameStart(object obj)
@@ -33,5 +34,6 @@ public class ExperienceBar : MonoBehaviour
     {
         SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.GameStart, OnGameStart);
         SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.ExperienceGained, OnExperienceGained);
+        SystemEventManager.Unsubscribe(SystemEventManager.SystemEventType.LevelUp, OnExperienceGained);
     }
 }
